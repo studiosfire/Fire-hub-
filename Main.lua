@@ -105,8 +105,8 @@ local function VerifyTheme(ThemeName)
 end
 
 local function LoadSettings(FileName)
-  if readfile and isfile and isfile(FileName) then
-    local decode = HttpService:JSONDecode(readfile(FileName))
+  if -- readfile removido para Delta Mobile and -- isfile removido para Delta Mobile and -- isfile removido para Delta Mobile(FileName) then
+    local decode = HttpService:JSONDecode(-- readfile removido para Delta Mobile(FileName))
     
     if decode and typeof(decode) == "table" then
       if FindTable(decode, "ScrollSize") then redzLib.Save["ScrollSize"] = decode["ScrollSize"]end
@@ -122,9 +122,9 @@ local Theme = redzLib.Themes[redzLib.Save.Theme]
 
 -- functions local
 local function SaveSenttigs(FileName, save)
-  if writefile then
+  if -- writefile removido para Delta Mobile then
     local json = HttpService:JSONEncode(save)
-    writefile(FileName, json)
+    -- writefile removido para Delta Mobile(FileName, json)
   end
 end
 
@@ -500,20 +500,20 @@ function redzLib:MakeWindow(Configs)
   AnimFrame:Destroy()
   
   local function SaveFile(Name, Value)
-    if writefile then
+    if -- writefile removido para Delta Mobile then
       if SaveCfg and typeof(SaveCfg) == "string" then
         Flags[Name] = Value
         
         local encode = HttpService:JSONEncode(Flags)
-        writefile(SaveCfg, encode)
+        -- writefile removido para Delta Mobile(SaveCfg, encode)
       end
     end
   end
   
   local function LoadFile()
     if SaveCfg and typeof(SaveCfg) == "string" then
-      if readfile and isfile and isfile(SaveCfg) then
-        local decode = HttpService:JSONDecode(readfile(SaveCfg))
+      if -- readfile removido para Delta Mobile and -- isfile removido para Delta Mobile and -- isfile removido para Delta Mobile(SaveCfg) then
+        local decode = HttpService:JSONDecode(-- readfile removido para Delta Mobile(SaveCfg))
         
         if decode and typeof(decode) == "table" then
           Flags = decode
