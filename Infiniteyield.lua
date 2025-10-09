@@ -324,7 +324,7 @@ Title.BorderSizePixel = 0
 Title.Size = UDim2.new(0, 250, 0, 20)
 Title.Font = Enum.Font.SourceSans
 Title.TextSize = 18
-Title.Text = "Aproveite o Infinite Yield feito da Fire Comunity by blox_doido_23968 | Versão " .. currentVersion
+Title.Text = " Infinite Yield  " .. currentVersion
 
 do
 	local emoji = ({
